@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Left and Right Panels */
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+/* Left Panel */
+main .left {
+  background-color: #000000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+/* Review Button */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+/* Right Panel */
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  main .left,
+  main .right {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .left .code {
+    height: 300px;
+  }
+
+  main .left .review {
+    position: static;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  main .right {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+
+.notification {
+  width: 100%;
+  background-color: #008cff;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.notification button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  outline: none;
+}
+
